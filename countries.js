@@ -1,6 +1,10 @@
 Countries = new Mongo.Collection("countries");
 
 if (Meteor.isServer) {
+    Meteor.publish("countries", function () {
+        return Countries.find();
+    });
+
     Meteor.methods({
         addCountry: function(countryName, countryCode, group) {
             Countries.insert({
@@ -16,6 +20,8 @@ if (Meteor.isServer) {
 }
 
 if (Meteor.isClient) {
+    Meteor.subscribe("countries");
+
     Template.addCountry.events({
         'submit .add-country': function(event, template) {
             event.preventDefault();
