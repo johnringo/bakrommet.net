@@ -1,0 +1,63 @@
+<template name="countries">
+    <div class="container">
+        {{#if currentUser}}
+            {{> addCountry}}
+        {{/if}}
+        {{> countryList}}
+    </div>
+</template>
+
+<template name="addCountry">
+    <section>
+        <header>
+            <h1>Add new country</h1>
+        </header>
+        <form class="add-country form-inline">
+            <div class="form-group">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="code" class="sr-only">Code</label>
+                <input type="text" class="form-control" id="code" name="code" placeholder="Code">
+            </div>
+            <div class="form-group">
+                <label for="group" class="sr-only">Group</label>
+                <input type="text" class="form-control" id="group" name="group" placeholder="Group">
+            </div>
+            <button type="submit" class="btn btn-default">Add country</button>
+        </form>
+    </section>
+</template>
+
+<template name="countryList">
+    <section>
+        <header>
+            <h1>List of countries</h1>
+        </header>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Group</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each countries}}
+                    {{> country}}
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+</template>
+
+<template name="country">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{code}}</td>
+        <td>{{group}}</td>
+        <td><span class="btn-link delete">Delete</span></td>
+    </tr>
+</template>
