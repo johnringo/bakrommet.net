@@ -1,6 +1,6 @@
 <template name="countries">
     <div class="container">
-        {{#if currentUser}}
+        {{#if isInRole 'admin'}}
             {{> addCountry}}
         {{/if}}
         {{> countryList}}
