@@ -11,9 +11,15 @@
             <a class="navbar-brand" href="{{pathFor 'home'}}">Bakrommet.net</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <div class="navbar-form navbar-right">
-                {{> loginButtons align="right"}}
-            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{{pathFor 'countries'}}">Countries</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {{#if isInRole 'admin'}}
+                    <li><a href="{{pathFor 'admin'}}">Admin</a></li>
+                {{/if}}
+                <li>{{> loginButtons align="right"}}</li>
+            </ul>
         </div><!--/.navbar-collapse -->
     </div>
 </nav>

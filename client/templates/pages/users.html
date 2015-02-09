@@ -1,0 +1,16 @@
+<template name="users">
+    <div class="container">
+        <header>
+            <h1>Users</h1>
+        </header>
+        <ul>
+            {{#each users}}
+                {{> user}}
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+<template name="user">
+    <li>{{profile.name}}</li>
+</template>

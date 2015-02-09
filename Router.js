@@ -16,5 +16,5 @@ Router.map(function() {
     // Admin routes:
     this.route('admin', {path: '/admin'});
     this.route('users', {path: '/admin/users'});
-    this.route('countries', {path: '/admin/countries'});
+    this.route('countries', {path: '/countries'});
 });
