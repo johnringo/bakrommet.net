@@ -10,3 +10,5 @@ accounts-password
 accounts-ui-unstyled
 accounts-ui
 alanning:roles
+velocity:html-reporter
+sanjo:jasmine
