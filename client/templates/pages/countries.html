@@ -55,9 +55,20 @@
 
 <template name="country">
     <tr>
-        <td>{{name}}</td>
-        <td>{{code}}</td>
-        <td>{{group}}</td>
-        <td><span class="btn-link delete">Delete</span></td>
+        <td>
+            <p class="form-control-static">
+                <img src="/flags/{{code}}.png"/>
+                <span>{{name}}</span>
+            </p>
+        </td>
+        <td>
+            <p class="form-control-static">{{code}}</p>
+        </td>
+        <td>
+            <p class="form-control-static">{{group}}</p>
+        </td>
+        <td>
+            <span class="btn btn-link delete">Delete</span>
+        </td>
     </tr>
 </template>
