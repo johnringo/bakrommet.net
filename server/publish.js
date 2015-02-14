@@ -4,10 +4,11 @@ Meteor.publish('users', function (group) {
     return Meteor.users.find({});
 
   } else {
-
-    // user not authorized. do not publish secrets
     this.stop();
     return;
-
   }
+});
+
+Meteor.publish("countries", function () {
+    return Countries.find();
 });
