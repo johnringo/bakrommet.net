@@ -13,6 +13,9 @@ Group.prototype.getName = function() {
 }
 
 Group.prototype.addCountry = function(country) {
+    if (!this.countries) {
+        countries = [];
+    }
     this.countries.push(country);
 }
 
