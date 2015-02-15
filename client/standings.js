@@ -1,4 +1,4 @@
-Template.groups.helpers({
+Template.standings.helpers({
     groups: function() {
         var allGroupNames = ['A', 'B', 'C', 'D'];
         var countries = Countries.find({});

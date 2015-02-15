@@ -12,7 +12,7 @@ Router.configure({
 
 Router.map(function() {
     this.route('home', {path: '/'});
-    this.route('groups', {path: '/groups'});
+    this.route('standings', {path: '/standings'});
 
     // Admin routes:
     this.route('admin', {path: '/admin'});
