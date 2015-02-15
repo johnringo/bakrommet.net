@@ -1,3 +1,41 @@
 <template name="groups">
-    
+<div class="container">
+    <header>
+        <h1>Groups</h1>
+    </header>
+    <div class="row">
+        {{#each groups}}
+            {{> group}}
+        {{/each}}
+    </div>
+</div>    
+</template>
+
+<template name="group">
+    <div class="col-md-3">
+        <h2>{{getName}}</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>M</th>
+                    <th>+/-</th>
+                    <th>P</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each countries}}
+                    <tr>
+                        <td>
+                            <img src="/flags/{{code}}.png"/>
+                            <span>{{name}}</span>
+                        </td>
+                        <td>{{matchesPlayed}}</td>
+                        <td>{{goalDifference}}</td>
+                        <td>{{points}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
 </template>
