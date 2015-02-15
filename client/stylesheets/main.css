@@ -3,3 +3,8 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+.navbar-nav > li> #login-buttons {
+    padding: 15px;
+    line-height: 20px;
+}
