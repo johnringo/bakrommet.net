@@ -10,5 +10,9 @@ Meteor.publish('users', function (group) {
 });
 
 Meteor.publish("countries", function () {
-    return Countries.find();
+    return Countries.find({});
 });
+
+Meteor.publish("matches", function() {
+    return Matches.find({});
+})
